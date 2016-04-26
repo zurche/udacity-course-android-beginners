@@ -1,4 +1,4 @@
-package example.az.basketballcounter;
+package example.az.court_counter;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
