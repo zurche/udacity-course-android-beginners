@@ -13,13 +13,17 @@ public class MainActivity extends AppCompatActivity {
     int price = 5;
     int quantity = 0;
     private boolean hasAddedWhippedCream;
+    private boolean hasAddedChocolate;
+    private CheckBox mWhippedCreamCheck;
+    private CheckBox mChocolateCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CheckBox whippedCreamCheck = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
-        hasAddedWhippedCream = whippedCreamCheck.isChecked();
+
+        mWhippedCreamCheck = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
+        mChocolateCheck = (CheckBox) findViewById(R.id.chocolate_checkbox);
     }
 
     /**
@@ -61,9 +65,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String createOrderSummary(int orderPrice) {
+        hasAddedWhippedCream = mWhippedCreamCheck.isChecked();
+        hasAddedChocolate = mChocolateCheck.isChecked();
+
         String stringOrderPrice = NumberFormat.getCurrencyInstance().format(orderPrice);
         return "Name: Kaptain Kunal" +
                 "\nAdd whipped cream? " + hasAddedWhippedCream +
+                "\nAdd chocolate? " + hasAddedChocolate +
                 "\nQuantity: " + quantity +
                 "\nTotal: " + stringOrderPrice +
                 "\nThank you!";
