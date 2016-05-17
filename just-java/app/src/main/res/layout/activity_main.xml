@@ -18,31 +18,39 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Toppings"
-                android:textAllCaps="true" />
+                android:hint="Name"/>
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:layout_marginBottom="16dp"
+                android:text="Toppings" />
 
             <CheckBox
                 android:id="@+id/whipped_cream_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:textSize="16sp"
                 android:text="Whipped Cream" />
 
             <CheckBox
                 android:id="@+id/chocolate_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"
                 android:text="Chocolate" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"
                 android:layout_marginBottom="16dp"
-                android:text="Quantity"
-                android:textAllCaps="true" />
+                android:text="Quantity" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -62,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="2"
+                    tools:text="2"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -76,11 +84,9 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"
                 android:layout_marginTop="16dp"
-                android:text="ORDER SUMMARY"
-                android:textAllCaps="true" />
+                android:text="ORDER SUMMARY" />
 
             <TextView
                 android:id="@+id/order_summary_text_view"
